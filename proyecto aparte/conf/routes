@@ -1,0 +1,31 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+
+# Post persona
+POST /persona                  controllers.PersonaController.guardarPersona
+
+# Post persona
+PUT /modificarpersona                  controllers.PersonaController.modificarPersona
+
+# lista de todas las personas
+GET /obternerpersonas                 controllers.PersonaController.obtnerTodasLasPersonas
+
+# Filtrar persona por cesdula
+GET /obternerpersona/:cedula                controllers.PersonaController.obtenerPersonaPorCedula(cedula: String)
+
+
+# Eliminar Persona por cedula
+DELETE /eliminarpersona/:cedulapersona  controllers.PersonaController.eliminarPersonaPorcedula(cedulapersona: String)
+
+
+#Calculadora
+POST /calcular                      controllers.CalculadoraController.calcularOperacion
